@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubArcada.BarCalendar.Web", "ClubArcada.BarCalendar.Web\ClubArcada.BarCalendar.Web.csproj", "{5C90C3EC-B3E2-46D3-AE64-94F07CCD03BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubArcada.BarCalendar.BusinessObjects", "ClubArcada.BarCalendar.BusinessObjects\ClubArcada.BarCalendar.BusinessObjects.csproj", "{9D19D5D6-7CDA-4897-9F7E-6EAAA9FC4C49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubArcada.BarCalendar.UnitTesting", "ClubArcada.BarCalendar.UnitTesting\ClubArcada.BarCalendar.UnitTesting.csproj", "{2D9C53C5-CC92-44A0-ACDE-9CF6CCC185B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C90C3EC-B3E2-46D3-AE64-94F07CCD03BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C90C3EC-B3E2-46D3-AE64-94F07CCD03BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C90C3EC-B3E2-46D3-AE64-94F07CCD03BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C90C3EC-B3E2-46D3-AE64-94F07CCD03BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D19D5D6-7CDA-4897-9F7E-6EAAA9FC4C49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D19D5D6-7CDA-4897-9F7E-6EAAA9FC4C49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D19D5D6-7CDA-4897-9F7E-6EAAA9FC4C49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D19D5D6-7CDA-4897-9F7E-6EAAA9FC4C49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D9C53C5-CC92-44A0-ACDE-9CF6CCC185B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D9C53C5-CC92-44A0-ACDE-9CF6CCC185B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D9C53C5-CC92-44A0-ACDE-9CF6CCC185B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D9C53C5-CC92-44A0-ACDE-9CF6CCC185B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

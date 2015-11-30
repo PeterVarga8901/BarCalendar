@@ -1,0 +1,489 @@
+﻿html {
+    overflow: -moz-scrollbars-vertical;
+    overflow: scroll;
+    min-width: 1100px;
+}
+
+body {
+    background-color: #FFF;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#divHeader {
+    width: 100%;
+    height: 40px;
+    background-color: #809EB7;
+}
+
+    #divHeader ul {
+        float: right;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #divHeader li {
+        display: inline-block;
+    }
+
+#divCalendarContainer {
+    overflow: hidden;
+    margin: 0px;
+    margin-top:0px;
+}
+
+    #divCalendarContainer ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+    }
+
+        #divCalendarContainer ul li {
+            float: left;
+            min-height: 175px;
+            border-right: solid 1px gray;
+            border-top: solid 1px gray;
+            margin: 0px;
+            padding: 0px;
+            background-color: #FFF;
+            position: relative;
+            overflow: hidden;
+            padding-top: 4px;
+            position:relative;
+        }
+
+            #divCalendarContainer ul li:nth-child(1),
+            #divCalendarContainer ul li:nth-child(8),
+            #divCalendarContainer ul li:nth-child(15),
+            #divCalendarContainer ul li:nth-child(22),
+            #divCalendarContainer ul li:nth-child(29),
+            #divCalendarContainer ul li:nth-child(36)
+            {
+                border-left: solid 1px gray;
+            }
+
+            #divCalendarContainer ul li:nth-child(36),
+            #divCalendarContainer ul li:nth-child(37),
+            #divCalendarContainer ul li:nth-child(38),
+            #divCalendarContainer ul li:nth-child(39),
+            #divCalendarContainer ul li:nth-child(40),
+            #divCalendarContainer ul li:nth-child(41),
+            #divCalendarContainer ul li:nth-child(42)
+            {
+                border-bottom: solid 1px gray;
+            }
+
+            #divCalendarContainer ul li .separator
+            {
+                position:absolute;
+                width:1px;
+                height:100%;
+                top:0px;
+                right:26px;
+                border-left:dashed 1px #D2EAF9;
+            }
+
+            #divCalendarContainer ul li .divShader {
+                width: 100%;
+                height: 100%;
+                opacity: 0.7;
+                z-index: 998;
+                background-color: #E6E6E6;
+                position: absolute;
+                top:0px;
+            }
+
+            #divCalendarContainer ul li .divDate {
+                bottom: 0px;
+                right: 0px;
+                width: 100px;
+                height: 22px;
+                position: absolute;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                text-align: right;
+                margin-right: 2px;
+                font-size: 16px;
+                font-weight:bold;
+                color:#5890B2;
+            }
+
+            #divCalendarContainer ul li .divNewShift {
+                top: 4px;
+                right: 2px;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                margin-right: 2px;
+                background-image:url(../Images/icons/add-user-3-24_hover.png);
+                background-size:cover;
+                cursor:pointer;
+            }
+
+            #divCalendarContainer ul li .divNewShift:hover {
+                background-image:url(../Images/icons/add-user-3-24.png);
+            }
+
+            #divCalendarContainer ul li .workerContainer {
+                display: inline-block;
+                margin-top: 0px;
+                margin-left: 4px;
+                height: 30px;
+                width: 80%;
+                background-color: #4797AC;
+                border: 0px solid #FFF;
+                -webkit-border-radius: 50px 10px 10px 50px;
+                border-radius: 50px 10px 10px 50px;
+                position:relative;
+            }
+
+            #divCalendarContainer ul li .divWorkerAvatar {
+                float: left;
+                margin-top: 0px;
+                margin-left: 0px;
+                height: 28px;
+                width: 28px;
+                border-radius: 50%;
+                background-color: #fff;
+                border: 1px solid #FFF;
+                background-image: url("../Images/avatar_default.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+
+            #divCalendarContainer ul li .divName {
+                float: left;
+                margin-top: 2px;
+                margin-left: 4px;
+                font-weight: bold;
+                height: 28px;
+                font-size: 12px;
+                line-height: 13px;
+                color: #FFFFFF;
+                word-wrap: break-word;
+                width: 70px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                text-align: left;
+                text-shadow: 0 0 1px #454545;
+            }
+
+            #divCalendarContainer ul li .divIconDay {
+                position:absolute;
+                width:14px;
+                height:14px;
+                background-size:cover;
+                right:2px;
+                top:2px;
+                background-image:url(../Images/icons/partly-cloudy-day-16.png);
+                
+            }
+            #divCalendarContainer ul li .divIconNight {
+                position:absolute;
+                width:14px;
+                height:14px;
+                background-size:cover;
+                right:2px;
+                top:2px;
+                background-image:url(../Images/icons/partly-cloudy-night-16.png);
+            }
+            #divCalendarContainer ul li .divIconHelp {
+                position:absolute;
+                width:14px;
+                height:14px;
+                background-size:cover;
+                right:2px;
+                top:2px;
+                background-image:url(../Images/icons/user-7-16.png);
+            }
+
+            #divCalendarContainer ul li .divWorkTime {
+                position:absolute;
+                width:30px;
+                right:2px;
+                bottom:-1px;
+                color:#FFFFFF;
+                font-size:11px;
+                text-align:right;
+                font-weight:bold;
+            }
+
+            #divCalendarContainer ul li .workerContainer .edit
+            {
+                position:absolute;
+                right:-30px;
+                background-color:inherit;
+                display:none;
+                width:32px;
+                height:30px;
+                
+                -webkit-border-radius: 0px 10px 10px 0px;
+                border-radius: 0px 10px 10px 0px;
+                cursor:pointer;
+            }
+
+            #divCalendarContainer ul li .workerContainer .edit .deleteBtn
+            {
+                height:16px;
+                width:16px;
+                background-size:cover;
+                margin-top:6px;
+                margin-left:5px;
+                background-image:url(../Images/icons/delete-normal.png);
+            }
+
+            #divCalendarContainer ul li .workerContainer .edit .deleteBtn:hover
+            {
+                background-image:url(../Images/icons/delete-hover.png);
+            }
+
+.formCover {
+    width: 1000px;
+    min-height: 120px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+
+.formCoverTwoCol {
+    width: 450px;
+    min-height: 120px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-shadow: 0 0 5px 0 #222;
+    box-shadow: 0 0 5px 0 #222;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.formCoverTwoCol ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+}
+
+.formCoverTwoCol li {
+    margin: 0px;
+    padding: 0px;
+    height: 30px;
+    line-height: 30px;
+    width: inherit;
+}
+
+    .formCoverTwoCol li input {
+        width: 100%;
+    }
+
+
+.divRollEdit
+{
+    position:fixed;
+    height:250px;
+    width:350px;
+    background-color:#FFF;
+    top:0px;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    z-index:9999;
+    -webkit-border-radius: 0 0 8px 8px;
+    border-radius: 0 0 8px 8px;
+    -webkit-box-shadow: 0 2px 30px 10px #000;
+    box-shadow: 0 2px 30px 10px #000;
+    display:none;
+}
+
+.divRollEdit ul
+{
+    float:left;
+    margin:0px;
+    padding:0px;
+    list-style-type:none;
+    margin-top:15px;
+}
+
+.divRollEdit ul li
+{
+    height:30px;
+}
+
+.divRollEdit ul li input, .divRollEdit ul li select
+{
+    width:100%;
+    margin:0px;
+    padding:0px;
+    height:24px;
+}
+
+input, select, textarea {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.greenButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #caefab;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #caefab;
+	box-shadow:inset 0px 1px 0px 0px #caefab;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77d42a), color-stop(1, #5cb811));
+	background:-moz-linear-gradient(top, #77d42a 5%, #5cb811 100%);
+	background:-webkit-linear-gradient(top, #77d42a 5%, #5cb811 100%);
+	background:-o-linear-gradient(top, #77d42a 5%, #5cb811 100%);
+	background:-ms-linear-gradient(top, #77d42a 5%, #5cb811 100%);
+	background:linear-gradient(to bottom, #77d42a 5%, #5cb811 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77d42a', endColorstr='#5cb811',GradientType=0);
+	background-color:#77d42a;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #268a16;
+	display:inline-block;
+	cursor:pointer;
+	color:#306108;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:4px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #aade7c;
+}
+.greenButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5cb811), color-stop(1, #77d42a));
+	background:-moz-linear-gradient(top, #5cb811 5%, #77d42a 100%);
+	background:-webkit-linear-gradient(top, #5cb811 5%, #77d42a 100%);
+	background:-o-linear-gradient(top, #5cb811 5%, #77d42a 100%);
+	background:-ms-linear-gradient(top, #5cb811 5%, #77d42a 100%);
+	background:linear-gradient(to bottom, #5cb811 5%, #77d42a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb811', endColorstr='#77d42a',GradientType=0);
+	background-color:#5cb811;
+}
+.greenButton:active {
+	position:relative;
+	top:1px;
+}
+
+.redButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #f29c93;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f29c93;
+	box-shadow:inset 0px 1px 0px 0px #f29c93;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100));
+	background:-moz-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+	background:-webkit-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+	background:-o-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+	background:-ms-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+	background:linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100',GradientType=0);
+	background-color:#fe1a00;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:4px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+.redButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00));
+	background:-moz-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:-webkit-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:-o-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:-ms-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100', endColorstr='#fe1a00',GradientType=0);
+	background-color:#ce0100;
+}
+.redButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+
+.divCalendarNavigetionBar
+{
+    width:100%;
+    height:40px;
+    background-color:darkgray;
+}
+.divCalendarNavigetionBar .lblDate
+{
+    margin-left:10px;
+    margin-right:10px;
+    color:white;
+    font-size:32px;
+    font-weight:bold;
+    width:180px;
+    text-align:center;
+    display:inline-block;
+}
+
+.divCalendarNavigetionBar input
+{
+    margin-top:4px;
+}
+
+
+
+.divUserListContainer
+{
+    float:left;
+    height:auto;
+    min-height:320px;
+    width:160px;
+}
+
+
+.divUserContainer
+{
+    width:160px;
+    height:30px;
+    line-height:28px;
+    margin-bottom:5px;
+    background-color:#677886;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.divUserContainer:hover
+{
+    -webkit-box-shadow: 0 0 5px 1px #171717;
+    box-shadow: 0 0 5px 1px #171717;
+}
+
+.divUserContainer a, .divUserContainer a:active, .divUserContainer a:visited
+{
+    margin-left:10px;
+    color:white;
+    font-weight:bold;
+    text-decoration:none;
+    font-size:12px;
+    text-shadow: 0 0 1px #333333;
+    display:block;
+
+}
+
+
+
+
+
+
+
+
+
+
+
